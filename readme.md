@@ -111,6 +111,6 @@ If using the WPTRT autoloader, use the following code:
 include get_theme_file_path( 'path/to/autoload/src/Loader.php' );
 
 $loader = new \WPTRT\Autoload\Loader();
-$loader->add( 'WPTRT\\AdminNotices\\Notice', get_theme_file_path( 'path/to/admin-notices/src' ) );
+$loader->add( 'WPTRT\\AdminNotices\\', get_theme_file_path( 'path/to/admin-notices/src' ) );
 $loader->register();
 ```
