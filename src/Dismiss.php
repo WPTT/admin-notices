@@ -82,7 +82,11 @@ class Dismiss {
 
 		$script = <<<EOD
 jQuery( function() {
-    var dismissBtn  = document.querySelector( '#wptrt-notice-$id .notice-dismiss' );
+    var dismissBtn = document.querySelector( '#wptrt-notice-$id .notice-dismiss' );
+
+    if ( ! dismissBtn ) {
+    	return;
+    }
 
     // Add an event listener to the dismiss button.
     dismissBtn.addEventListener( 'click', function( event ) {
